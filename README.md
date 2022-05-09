@@ -6,7 +6,7 @@ Thanks for coming!
 
 ### GirlFriend
 friends, come and see,this is my girlfriend! I love her very much.
-[68c6472929f6cd37.jpg](https://github.com/ShiYuLiu1103/ShiYuLiu1103.github.io/blob/main/img/68c6472929f6cd37.jpg)
+![68c6472929f6cd37](https://github.com/ShiYuLiu1103/ShiYuLiu1103.github.io/blob/main/img/68c6472929f6cd37.jpg)
 
 
 ### Markdown
