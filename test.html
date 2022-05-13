@@ -1,0 +1,328 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style id="system" type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 15px helvetica, arial, freesans, clean, sans-serif;
+            color: black;
+            line-height: 1.4em;
+            background-color: #F8F8F8;
+            padding: 0.7em;
+        }
+
+        p {
+            margin: 1em 0;
+            line-height: 1.5em;
+            text-indent: 2em;
+            font-size: 16px;
+        }
+
+        table {
+            font-size: inherit;
+            font: 100%;
+            margin: 1em;
+        }
+
+        table th {
+            border-bottom: 1px solid #bbb;
+            padding: .2em 1em;
+        }
+
+        table td {
+            border-bottom: 1px solid #ddd;
+            padding: .2em 1em;
+        }
+
+        input[type=text],
+        input[type=password],
+        input[type=image],
+        textarea {
+            font: 99% helvetica, arial, freesans, sans-serif;
+        }
+
+        select,
+        option {
+            padding: 0 .25em;
+        }
+
+        optgroup {
+            margin-top: .5em;
+        }
+
+        pre,
+        code {
+            font: 12px Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+        }
+
+        pre {
+            margin: 1em 0;
+            font-size: 12px;
+            background-color: #eee;
+            border: 1px solid #ddd;
+            padding: 5px;
+            line-height: 1.5em;
+            color: #444;
+            overflow: auto;
+            -webkit-box-shadow: rgba(0, 0, 0, 0.07) 0 1px 2px inset;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        pre code {
+            padding: 0;
+            font-size: 12px;
+            background-color: #eee;
+            border: none;
+        }
+
+        code {
+            font-size: 12px;
+            background-color: #f8f8ff;
+            color: #444;
+            padding: 0 .2em;
+            border: 1px solid #dedede;
+        }
+
+        img {
+            border: 0;
+            margin: 0 auto;
+            position: relative;
+            max-width: 80%;
+            max-height: 80%;
+            border-radius: 13px;
+            display: flex;
+            /* 保证图片不模糊 */
+            image-rendering: -moz-crisp-edges;
+            /* Firefox */
+            image-rendering: -o-crisp-edges;
+            /* Opera */
+            image-rendering: -webkit-optimize-contrast;
+            /* Webkit (non-standard naming) */
+            image-rendering: crisp-edges;
+            -ms-interpolation-mode: nearest-neighbor;
+            /* IE (non-standard property) */
+
+        }
+
+        #outerdiv {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            display: none;
+            color: #5E7C87;
+        }
+
+        .zoom-in {
+            cursor: -moz-zoom-in;
+            cursor: -webkit-zoom-in;
+            cursor: zoom-in;
+        }
+
+        .zoom-out {
+            cursor: -moz-zoom-out;
+            cursor: -webkit-zoom-out;
+            cursor: zoom-out;
+        }
+
+        img:hover {
+            cursor: zoom-in;
+        }
+
+        abbr {
+            border-bottom: none;
+        }
+
+        a {
+            color: #4183c4;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a code,
+        a:link code,
+        a:visited code {
+            color: #4183c4;
+        }
+
+        h2,
+        h3 {
+            margin: 1em 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            border: 0;
+        }
+
+        h1 {
+            font-size: 170%;
+            border-top: 4px solid #aaa;
+            padding-top: .5em;
+            margin-top: 1.5em;
+        }
+
+        h1:first-child {
+            margin-top: 0;
+            padding-top: .25em;
+            border-top: none;
+        }
+
+        h2 {
+            font-size: 150%;
+            margin-top: 1.5em;
+            border-top: 4px solid #e0e0e0;
+            padding-top: .5em;
+        }
+
+        h3 {
+            margin-top: 1em;
+        }
+
+        hr {
+            border: 1px solid #ddd;
+        }
+
+        ul {
+            margin: 1em 0 1em 2em;
+        }
+
+        ol {
+            margin: 1em 0 1em 2em;
+        }
+
+        ul li,
+        ol li {
+            margin-top: .5em;
+            margin-bottom: .5em;
+        }
+
+        ul ul,
+        ul ol,
+        ol ol,
+        ol ul {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        blockquote {
+            margin: 1em 0;
+            border-left: 5px solid #ddd;
+            padding-left: 0em;
+            color: #555;
+        }
+
+        dt {
+            font-weight: bold;
+            margin-left: 1em;
+        }
+
+        dd {
+            margin-left: 2em;
+            margin-bottom: 1em;
+        }
+
+        @media screen and (min-width: 768px) {
+            body {
+                width: 1000px;
+                margin: 20px auto;
+            }
+        }
+    </style>
+    <script src=""static\js\jquery-3.4.1.min.js""></script>
+</head>
+
+<body marginheight="0">
+    <h2>
+        <center>云智图片</center>
+    </h2>
+    <blockquote>
+        <p>新闻测试
+        </p>
+    </blockquote>
+    <p>今天是和朱宝在一起的第193天，她真是个笨猪猪，今天又把油吃到衣服上了，可爱的笨猪猪，也不知道以后会不会变得聪明一点，真为她着急，希望她每天都快快乐乐的，没有烦恼。
+
+    </p>
+    <div id="outerdiv">
+        <div id="innerdiv" style="width:85%;">
+            <img id="bigimg" style="height:95%;border:2px solid #fff;" />
+        </div>
+    </div>
+
+    <p><img src="img/云智1.jpg" alt="云智1" class="pic">
+
+    </p>
+    <p><img src="img/云智2.jpg" alt="云智2" class="pic">
+
+    </p>
+    <p><img src="img/云智3.jpg" alt="云智3" class="pic">
+
+    </p>
+    <h2>关于作者</h2>
+    <p>
+        Edit By <a href="http://shiyuliu1103.github.io">ShiYu</a>
+    </p>
+    <script>
+        $(function () {
+            $(".pic").click(function () {
+                var _this = $(this);//将当前的pimg元素作为_this传入函数 
+                imgShow("#outerdiv", "#innerdiv", "#bigimg", _this);
+            });
+        });
+        function imgShow(outerdiv, innerdiv, bigimg, _this) {
+            var src = _this.attr("src");//获取当前点击的pimg元素中的src属性 
+            $(bigimg).attr("src", src);//设置#bigimg元素的src属性 
+            /*获取当前点击图片的真实大小，并显示弹出层及大图*/
+            $("<img/>").attr("src", src).on('load', function () {
+                var windowW = $(window).width();//获取当前窗口宽度 
+                var windowH = $(window).height();//获取当前窗口高度 
+                var realWidth = this.width;//获取图片真实宽度 
+                var realHeight = this.height;//获取图片真实高度 
+                var imgWidth, imgHeight;
+                var scale = 0.8;//缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放 
+                if (realHeight > windowH * scale) {//判断图片高度 
+                    imgHeight = windowH * scale;//如大于窗口高度，图片高度进行缩放 
+                    imgWidth = imgHeight / realHeight * realWidth;//等比例缩放宽度 
+                    if (imgWidth > windowW * scale) {//如宽度扔大于窗口宽度 
+                        imgWidth = windowW * scale;//再对宽度进行缩放 
+                    }
+                } else if (realWidth > windowW * scale) {//如图片高度合适，判断图片宽度 
+                    imgWidth = windowW * scale;//如大于窗口宽度，图片宽度进行缩放 
+                    imgHeight = imgWidth / realWidth * realHeight;//等比例缩放高度 
+                } else {//如果图片真实高度和宽度都符合要求，高宽不变 
+                    imgWidth = realWidth;
+                    imgHeight = realHeight;
+                }
+                $(bigimg).css("width", imgWidth);//以最终的宽度对图片缩放 
+                var w = (windowW - imgWidth) / 2;//计算图片与窗口左边距 
+                var h = (windowH - imgHeight) / 2;//计算图片与窗口上边距 
+                $(innerdiv).css({ "top": h, "left": w });//设置#innerdiv的t000000000000000p和left属性 
+                $(outerdiv).fadeIn("fast");//淡入显示#outerdiv及.pimg 
+            });
+            $(outerdiv).click(function () {//再次点击淡出消失弹出层 
+                $(this).fadeOut("fast");
+            });
+        }
+    </script>
+</body>
+</html>
